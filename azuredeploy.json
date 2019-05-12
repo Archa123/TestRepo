@@ -13,7 +13,7 @@
         {
             "name": "[parameters('eventGridTopicName')]",
             "type": "Microsoft.EventGrid/topics",
-            "location": "[resourceGroup().location]",
+            "location": "East US",
             "apiVersion": "2018-01-01"
         }
     ]
