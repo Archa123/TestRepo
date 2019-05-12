@@ -8,7 +8,13 @@
         },
         "branch": {
             "type": "string"
-        }
+        },
+        "eventGridTopicName": {
+            "type": "string",
+            "metadata": {
+                "description": "The name of the Event Grid custom topic."
+            }
+        },
     },
     "variables": {
         "storageName": "[concat('todofunc', uniqueString(parameters('siteName'), resourceGroup().id))]"
@@ -117,6 +123,12 @@
                 "ApplicationId": "[parameters('siteName')]",
                 "Request_Source": "IbizaWebAppExtensionCreate"
             }
+        },
+        {
+            "name": "[parameters('eventGridTopicName')]",
+            "type": "Microsoft.EventGrid/topics",
+            "location": "[resourceGroup().location]",
+            "apiVersion": "2018-01-01"
         }
     ],
     "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
