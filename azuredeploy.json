@@ -11,7 +11,8 @@
         }
     },
     "variables": {
-        "storageName": "[concat('todofunc', uniqueString(parameters('siteName'), resourceGroup().id))]"
+        "storageName": "[concat('todofunc', uniqueString(parameters('siteName'), resourceGroup().id))]",
+        "topicName": "[concat('todotopic', uniqueString(parameters('siteName'), resourceGroup().id))]"
     },
     "resources": [
         {
