@@ -117,6 +117,12 @@
                 "ApplicationId": "[parameters('siteName')]",
                 "Request_Source": "IbizaWebAppExtensionCreate"
             }
+        },
+        {
+            "name": "testarcha1topic",
+            "type": "Microsoft.EventGrid/topics",
+            "location": "[resourceGroup().location]",
+            "apiVersion": "2018-01-01"
         }
     ],
     "$schema": "http://schema.management.azure.com/schemas/2014-04-01-preview/deploymentTemplate.json#",
