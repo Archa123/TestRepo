@@ -8,12 +8,6 @@
         },
         "branch": {
             "type": "string"
-        },
-        "eventGridTopicName": {
-            "type": "string",
-            "metadata": {
-                "description": "The name of the Event Grid custom topic."
-            }
         }
     },
     "variables": {
@@ -123,14 +117,8 @@
                 "ApplicationId": "[parameters('siteName')]",
                 "Request_Source": "IbizaWebAppExtensionCreate"
             }
-        },
-        {
-            "name": "[parameters('eventGridTopicName')]",
-            "type": "Microsoft.EventGrid/topics",
-            "location": "[resourceGroup().location]",
-            "apiVersion": "2018-01-01"
         }
     ],
-    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "$schema": "http://schema.management.azure.com/schemas/2014-04-01-preview/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0"
 }
